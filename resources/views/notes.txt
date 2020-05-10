@@ -1,0 +1,59 @@
+# to run project 
+ - open project on vscode
+ - php artisan serve on terminal
+
+ # you have to part 
+  * first admin
+        - to login to admin go to this link http://localhost:8000/login  email= admin@admin.com password= 12345678
+        - you can register student.
+
+    * send student 
+        - have mail with credintals
+        - can login 
+        - can complete profile
+
+
++--------+----------+------------------------+---------------------------+------------------------------------------------------------------------+-------------------+
+| Domain | Method   | URI                    | Name                      | Action                                                                 | Middleware     
+   |
++--------+----------+------------------------+---------------------------+------------------------------------------------------------------------+-------------------+
+|        | GET|HEAD | /                      | home                      | App\Http\Controllers\HomeController@index                              | web
+   |
+|        | GET|HEAD | admin/home             | admin.home                | App\Http\Controllers\HomeController@adminHome                          | web,is_admin,auth |
+|        | POST     | admin/register-student | admin.registerStudent     | App\Http\Controllers\HomeController@registerStudent                    | web,is_admin,auth |
+|        | GET|HEAD | admin/register-student | admin.formRegisterStudent | App\Http\Controllers\HomeController@formRegisterStudent                | web,is_admin,auth |
+|        | GET|HEAD | api/user               |                           | Closure                                                                | api,auth:api   
+   |
+|        | GET|HEAD | login                  | login                     | App\Http\Controllers\Auth\LoginController@showLoginForm                | web,guest      
+   |
+|        | POST     | login                  |                           | App\Http\Controllers\Auth\LoginController@login                        | web,guest      
+   |
+|        | POST     | logout                 | logout                    | App\Http\Controllers\Auth\LoginController@logout                       | web
+   |
+|        | POST     | password/confirm       |                           | App\Http\Controllers\Auth\ConfirmPasswordController@confirm            | web,auth       
+   |
+|        | GET|HEAD | password/confirm       | password.confirm          | App\Http\Controllers\Auth\ConfirmPasswordController@showConfirmForm    | web,auth       
+   |
+|        | POST     | password/email         | password.email            | App\Http\Controllers\Auth\ForgotPasswordController@sendResetLinkEmail  | web
+   |
+|        | POST     | password/reset         | password.update           | App\Http\Controllers\Auth\ResetPasswordController@reset                | web
+   |
+|        | GET|HEAD | password/reset         | password.request          | App\Http\Controllers\Auth\ForgotPasswordController@showLinkRequestForm | web
+   |
+|        | GET|HEAD | password/reset/{token} | password.reset            | App\Http\Controllers\Auth\ResetPasswordController@showResetForm        | web
+   |
+|        | GET|HEAD | programs/{slug}        | programs                  | App\Http\Controllers\HomeController@programs                           | web
+   |
+|        | POST     | register               |                           | App\Http\Controllers\Auth\RegisterController@register                  | web,guest      
+   |
+|        | GET|HEAD | register               | register                  | App\Http\Controllers\Auth\RegisterController@showRegistrationForm      | web,guest      
+   |
+|        | GET|HEAD | student/complete       | student.completeform      | App\Http\Controllers\StudentController@formComplete                    | web,auth       
+   |
+|        | POST     | student/complete       | student.complete          | App\Http\Controllers\StudentController@Complete                        | web,auth       
+   |
+|        | GET|HEAD | student/login          | student.formLogin         | App\Http\Controllers\LoginController@formLogin                         | web,guest      
+   |
+|        | POST     | student/login          | student.login             | App\Http\Controllers\LoginController@Login                             | web,guest      
+   |
++--------+----------+------------------------+---------------------------+------------------------------------------------------------------------+-------------------+

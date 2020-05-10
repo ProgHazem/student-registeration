@@ -1,0 +1,142 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+  background-color: #505050;
+    
+    background-size: cover;
+    
+}
+.background{
+    background-color: #333332;
+    opacity: .9;
+    height: 690px;
+    width: 1300px;
+    margin: 70px auto;
+    border-radius: 20px; 
+   border: 5px solid #48a0dc;
+}
+.background:hover{
+    border: 2px solid #ed7465;
+}
+.background .head{
+    margin-left: 280px;
+    color: #000;
+    margin-top: -73px;
+    
+    font-size: 28px;
+    background-color: #eee;
+    width: 750px;
+}
+.background .head img{
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    float: left;
+}
+
+.background form{
+    padding-top: 30px;
+}
+.background form div{
+    margin-left: 360px;
+ 
+}
+.background form .name{
+    padding: 15px 5px 15px 15px;
+    width: 533px;
+    border-radius: 5px;
+    border: none;
+    font-size: 30px;
+    text-align: right;
+    margin-left: 365px;
+}
+.background .form-group{
+    font-size: 35px;
+    border: none;
+ 
+    margin-left: -280px;
+    margin-top: -50px;
+    color: #eee;
+}
+.background .form-label{
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    color: #707070;
+    font-size: 25px;
+    
+}
+.background .date{
+    
+    margin-top:- 200px;
+}
+
+.background form .input{
+    padding: 15px 50px 15px 15px;
+    margin-top: 50px;
+   margin-left: 732px;
+    text-align: right;
+    width: 530px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+}
+.background form .input2{
+    padding: 15px 50px 15px 15px;
+    margin-top: 50px;
+   margin-left: 732px;
+    text-align: right;
+    width: 530px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+}
+
+.background form .input8{
+    padding: 15px 50px 15px 15px;
+    margin-top: -58px;
+   margin-left: 20px;
+    text-align: right;
+    width: 350px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+}
+.background form .pass{
+    border: none;
+    background: #ddd;
+    color: black;
+    margin-top: -55px;
+    margin-left: 440px;
+    padding: 10px 10px;
+    width: 250px;
+    font-size: 35px;
+    border-radius: 8px;
+}
+.background form .pass:hover{
+    background: #909090;
+}
+.background form .sign{
+    border: none;
+    background: #48a0dc;
+    color: white;
+    margin-top: 50px;
+    margin-left: 140px;
+    padding: 10px 10px;
+    width: 250px;
+    font-size: 40px;
+    border-radius: 15px;
+}
+.background form .sign:hover{
+    background: #ed7465;
+}
+.space{
+   padding-left: 30px;
+   margin-top: 20px;
+}
